@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+           assembly="StorePOS.Dominio"
+           namespace="StorePOS.Dominio.Modelo.Inventario" default-access="field">
+ 
+  <class name="Articulo" table="Articulo" schema="Inventario">
+    <id name="id">
+      <generator class="hilo">
+        <param name="table">hibernate_unique_key</param>
+        <param name="column">next_hi</param>
+      </generator>
+    </id>
+    <many-to-one name="grupoArticulo" column="idGrupoArticulo" lazy="false" fetch="join" not-null="false" />
+    <property name="descripcion" not-null="true" />
+    <property name="codigo" />
+    <property name="valor" not-null="true" />
+    <property name="criterioCosteo" column="criterioCosteo" type="StorePOS.Infrastructura.Persistencia.Mapeo.CriterioCosteoTipoString, StorePOS.Infrastructura.Persistencia" />
+    <property name="cantidadStock" />
+  </class>
+  <!--<sql-query name="ObtenerArticulos">
+    <return class="Articulo">
+      <return-property column="id" name="id" />
+      <return-property name="grupoArticulo">
+        --><!-- name of the component --><!--
+        <return-column name="idGrupoArticulo" />
+      </return-property>
+      <return-property column="descripcion" name="descripcion" />
+      <return-property column="codigo" name="codigo" />
+      <return-property column="valor" name="valor" />
+      <return-property column="criterioCosteo" name="criterioCosteo" />
+      <return-property column="cantidadStock" name="cantidadStock" />
+    </return>
+    SELECT DISTINCT
+    ART.id AS id
+    ,ART.descripcion AS descripcion
+    ,ART.codigo AS codigo
+    ,ART.criterioCosteo AS criterioCosteo
+    ,ART.cantidadStock  AS cantidadStock
+    ,ART.idGrupoArticulo AS idGrupoArticulo
+    ,ART.valor AS valor
+
+    FROM  Inventario_GrupoArticulo GRA
+    INNER JOIN
+    (
+    SELECT
+    Nivel0.id as Nivel0,
+    Nivel1.id as Nivel1,
+    Nivel2.id as Nivel2,
+    Nivel3.id as Nivel3,
+    Nivel4.id as Nivel4
+
+    FROM Inventario_GrupoArticulo Nivel0
+
+    LEFT JOIN Inventario_GrupoArticulo Nivel1
+    ON Nivel0.id = Nivel1.idGrupoArticulo
+
+    LEFT JOIN Inventario_GrupoArticulo Nivel2
+    ON Nivel1.id = Nivel2.idGrupoArticulo
+
+    LEFT JOIN Inventario_GrupoArticulo Nivel3
+    ON Nivel2.id = Nivel3.idGrupoArticulo
+
+    LEFT JOIN Inventario_GrupoArticulo Nivel4
+    ON Nivel3.id = Nivel4.idGrupoArticulo
+
+    LEFT JOIN Inventario_GrupoArticulo Nivel5
+    ON Nivel4.id = Nivel5.idGrupoArticulo
+
+    WHERE (Nivel0.id = :idGrupoArticulo OR :idGrupoArticulo IS NULL)
+
+    ) Niveles
+
+    ON (GRA.id = Niveles.Nivel0 OR GRA.id = Niveles.Nivel1 OR GRA.id = Niveles.Nivel2)
+
+    INNER JOIN Inventario_Articulo ART
+    ON ART.idGrupoArticulo = GRA.id
+
+    WHERE (ART.codigo LIKE '%' + :codigo + '%')
+    AND   (ART.descripcion LIKE '%' + :descripcion + '%')
+  </sql-query>-->
+  <sql-query name="ObtenerArticulos">
+      <return class="Articulo">
+        <return-property column="id" name="id" />
+        <return-property name="grupoArticulo">
+        <return-column name="idGrupoArticulo" />
+      </return-property>
+      <return-property column="descripcion" name="descripcion" />
+      <return-property column="codigo" name="codigo" />
+      <return-property column="valor" name="valor" />
+      <return-property column="criterioCosteo" name="criterioCosteo" />
+      <return-property column="cantidadStock" name="cantidadStock" />
+    </return>
+    SELECT DISTINCT
+    ART.id AS id
+    ,ART.descripcion AS descripcion
+    ,ART.codigo AS codigo
+    ,ART.criterioCosteo AS criterioCosteo
+    ,ART.cantidadStock  AS cantidadStock
+    ,ART.idGrupoArticulo AS idGrupoArticulo
+    ,ART.valor AS valor
+
+    FROM  Inventario.GrupoArticulo GRA
+    INNER JOIN
+    (
+    SELECT
+    Nivel0.id as Nivel0,
+    Nivel1.id as Nivel1,
+    Nivel2.id as Nivel2,
+    Nivel3.id as Nivel3,
+    Nivel4.id as Nivel4
+
+    FROM Inventario.GrupoArticulo Nivel0
+
+    LEFT JOIN Inventario.GrupoArticulo Nivel1
+    ON Nivel0.id = Nivel1.idGrupoArticulo
+
+    LEFT JOIN Inventario.GrupoArticulo Nivel2
+    ON Nivel1.id = Nivel2.idGrupoArticulo
+
+    LEFT JOIN Inventario.GrupoArticulo Nivel3
+    ON Nivel2.id = Nivel3.idGrupoArticulo
+
+    LEFT JOIN Inventario.GrupoArticulo Nivel4
+    ON Nivel3.id = Nivel4.idGrupoArticulo
+
+    LEFT JOIN Inventario.GrupoArticulo Nivel5
+    ON Nivel4.id = Nivel5.idGrupoArticulo
+
+    WHERE (Nivel0.id = :idGrupoArticulo OR :idGrupoArticulo IS NULL)
+    ) Niveles
+
+    ON (GRA.id = Niveles.Nivel0 OR GRA.id = Niveles.Nivel1 OR GRA.id = Niveles.Nivel2)
+
+    INNER JOIN Inventario.Articulo ART
+    ON ART.idGrupoArticulo = GRA.id
+
+    WHERE (ART.codigo LIKE '%' + :codigo + '%')
+    AND   (ART.descripcion LIKE '%' + :descripcion + '%')
+  </sql-query>
+</hibernate-mapping>

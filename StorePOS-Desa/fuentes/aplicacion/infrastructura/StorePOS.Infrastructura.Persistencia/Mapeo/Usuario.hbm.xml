@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+           assembly="StorePOS.Dominio"
+           namespace="StorePOS.Dominio.Modelo.AdministracionSistema" default-access="field">
+ 
+  <class name="Usuario" table="Usuario" schema="AdministracionSistema">
+    <id name="id">
+      <generator class="hilo">
+        <param name="table">hibernate_unique_key</param>
+        <param name="column">next_hi</param>
+      </generator>
+    </id>
+    <property name="nombreUsuario" not-null="true" />
+  </class>
+  <sql-query name="ObtenerContraseñaUsuario">
+    <return-scalar column="SalContraseña" type="binary(16)"/>
+    <return-scalar column="HashContraseña" type="binary(64)"/>
+        SELECT
+             SalContraseña
+            ,HashContraseña
+        FROM [AdministracionSistema].[Usuario]
+        WHERE nombreUsuario = :nombreUsuario
+  </sql-query>
+</hibernate-mapping>

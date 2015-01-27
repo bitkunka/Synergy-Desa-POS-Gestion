@@ -1,0 +1,93 @@
+http://www.softigal.com/software-gestion/zapaterias/
+
+https://www.youtube.com/watch?v=A4V1SUbEQQs
+
+
+Ventas
+
+TRSN
+
+	Nueva Venta - Factura (Manual) - Contado / Cuenta corriente
+
+	Nueva Venta - Factura (Ticket) - Contado / Cuenta corriente
+
+	Nueva Devolucion - N.Credito (Manual)
+
+	Nueva Devolucion - N.Credito (Ticket)
+	
+	Cancerlar Venta
+
+RPT
+	Comprobante de Ventas / Devoluciones - Reimpresion / Facturacion
+	
+	Resumen de Ventas / Devoluciones
+
+	Reimpresion de Facturas
+
+	Estado cuenta de cliente
+
+	Consulta de Precios de Venta
+	
+	Consula de Stock
+	
+ADM
+	Lista Precios de Venta
+		
+
+
+Caja
+	
+
+TRSN
+	Apertura de Caja
+	Entrada Salida de Efectivo
+	Cierre de Caja
+
+RPT
+
+	Resumen de Caja
+
+
+
+Iventario
+
+TRSN
+	Toma de Inventario
+	Movimientos de Stock
+
+RPT
+	Consulta de Movimientos de Stock
+
+	Consulta de Stock
+	
+	Resumen de Stock valorizado
+
+	Alertas de Stock (ver titulo)
+
+ADM
+	Catalogo de Articulos
+	Grupo de Articulos
+	Ubicaciones
+	
+
+Compras
+
+TRSN
+
+	Nueva Compra - Factura - Contado / Cuenta corriente
+
+	Nueva Devolucion - N.Debito 
+	
+	Cancerlar Compra
+
+RPT
+	Comprobante de Compras / Devoluciones - Reimpresion
+	
+	Resumen de Compras / Devoluciones
+
+	Estado cuenta de Proveedores
+
+	Consulta de Precios de Compra
+	
+	Consula de Stock
+	

@@ -1,0 +1,26 @@
+Ingreso
+
+
+Comprobante
+Fecha
+Deposito
+
+Codigo de Articulo
+
+Descripcion
+Deposito (Dep)
+Cantidad
+UnidadMedida
+PrecioUnitario
+
+
+MovimientoStock
+
+tipoMovimientoStock;
+stock;
+cantidad;
+documentoComercial = Comprobante;
+fechaDocumento = FechaComprobante
+fechaRegistro = FechaRegistro;
+usuarioRegistro = UsuarioRegistro;
+       

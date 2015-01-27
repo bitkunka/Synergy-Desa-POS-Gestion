@@ -1,0 +1,69 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dominio", "Dominio", "{77A5D4CC-67C5-4799-BDE2-529C2B055940}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Aplicacion", "Aplicacion", "{49DCF188-1C5D-4A11-8300-08BADB9B0BD2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructura", "Infrastructura", "{76A730F9-F9D7-4EE8-9D17-DD7508350254}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentacion", "Presentacion", "{D8956952-A3C2-4615-B46F-80A86C244F9F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Esquema", "Esquema", "{F657AB96-8AB8-44DC-A116-5003D0EAEA69}"
+	ProjectSection(SolutionItems) = preProject
+		..\librerias\nhibernate-configuration.xsd = ..\librerias\nhibernate-configuration.xsd
+		..\librerias\nhibernate-mapping.xsd = ..\librerias\nhibernate-mapping.xsd
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SynergyGestion.Test", "test\SynergyGestion.Test\SynergyGestion.Test.csproj", "{8CB8D5BA-12BB-44E7-97D5-5C4F173D3293}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SynergyGestion.Aplicacion", "aplicacion\aplicacion\SynergyGestion.Aplicacion\SynergyGestion.Aplicacion.csproj", "{8AB6C1DB-E0C1-4E1C-9077-2878F3720FE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SynergyGestion.Dominio", "aplicacion\dominio\SynergyGestion.Dominio\SynergyGestion.Dominio.csproj", "{64AF5933-D554-4129-8303-E9DB89B96EA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SynergyGestion.Persistencia", "aplicacion\infrastructura\SynergyGestion.Infrastructura.Persistencia\SynergyGestion.Persistencia.csproj", "{997DA642-0342-4801-AFA1-9D32CA164038}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A272DED0-F7FD-47AD-8457-F0486B9C80B9}"
+	ProjectSection(SolutionItems) = preProject
+		BorradorQryArticulos.txt = BorradorQryArticulos.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SynergyGestion.GUI", "aplicacion\presentacion\SynergyGestion.GUI\SynergyGestion.GUI.csproj", "{2C2A076B-E626-4A07-9D6E-4AEE3FEC41B6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8CB8D5BA-12BB-44E7-97D5-5C4F173D3293}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CB8D5BA-12BB-44E7-97D5-5C4F173D3293}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CB8D5BA-12BB-44E7-97D5-5C4F173D3293}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CB8D5BA-12BB-44E7-97D5-5C4F173D3293}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AB6C1DB-E0C1-4E1C-9077-2878F3720FE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AB6C1DB-E0C1-4E1C-9077-2878F3720FE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AB6C1DB-E0C1-4E1C-9077-2878F3720FE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AB6C1DB-E0C1-4E1C-9077-2878F3720FE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64AF5933-D554-4129-8303-E9DB89B96EA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64AF5933-D554-4129-8303-E9DB89B96EA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64AF5933-D554-4129-8303-E9DB89B96EA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64AF5933-D554-4129-8303-E9DB89B96EA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{997DA642-0342-4801-AFA1-9D32CA164038}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{997DA642-0342-4801-AFA1-9D32CA164038}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{997DA642-0342-4801-AFA1-9D32CA164038}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{997DA642-0342-4801-AFA1-9D32CA164038}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C2A076B-E626-4A07-9D6E-4AEE3FEC41B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C2A076B-E626-4A07-9D6E-4AEE3FEC41B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C2A076B-E626-4A07-9D6E-4AEE3FEC41B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C2A076B-E626-4A07-9D6E-4AEE3FEC41B6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{64AF5933-D554-4129-8303-E9DB89B96EA9} = {77A5D4CC-67C5-4799-BDE2-529C2B055940}
+		{8AB6C1DB-E0C1-4E1C-9077-2878F3720FE0} = {49DCF188-1C5D-4A11-8300-08BADB9B0BD2}
+		{997DA642-0342-4801-AFA1-9D32CA164038} = {76A730F9-F9D7-4EE8-9D17-DD7508350254}
+		{2C2A076B-E626-4A07-9D6E-4AEE3FEC41B6} = {D8956952-A3C2-4615-B46F-80A86C244F9F}
+	EndGlobalSection
+EndGlobal

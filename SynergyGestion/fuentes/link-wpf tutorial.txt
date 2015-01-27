@@ -1,0 +1,5 @@
+datagrid
+
+http://blog.smoura.com/introducing-the-wpf-toolkit-datagrid/
+
+http://nosalan.blogspot.com.ar/2013/10/wpf-datagrid-with-filtering-mvvm.html

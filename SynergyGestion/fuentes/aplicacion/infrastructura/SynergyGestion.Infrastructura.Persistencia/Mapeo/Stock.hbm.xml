@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+          assembly="SynergyGestion.Dominio"
+          namespace="SynergyGestion.Dominio.Modelo.Inventario" default-access="field">
+  
+  <class name="Stock" table="Stock" schema="Inventario">
+    <id name="id">
+      <generator class="hilo">
+        <param name="table">hibernate_unique_key</param>
+        <param name="column">next_hi</param>
+      </generator>
+    </id>
+    
+    <many-to-one name="articulo" column="idArticulo" cascade="all-delete-orphan" lazy="false" />
+    <property name="ubicacion" not-null="true" />
+    <property name="cantidad" not-null="true" />
+   
+  </class>
+</hibernate-mapping>

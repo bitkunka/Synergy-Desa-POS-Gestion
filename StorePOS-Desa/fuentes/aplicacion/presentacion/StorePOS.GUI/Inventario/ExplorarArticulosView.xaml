@@ -1,0 +1,43 @@
+﻿<Controls:MetroWindow x:Class="StorePOS.GUI.Inventario.ExplorarArticulosView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Ribbon x:Name="RibbonWin"  SelectedIndex="0">
+            <Ribbon.QuickAccessToolBar>
+                <RibbonQuickAccessToolBar>
+                   
+                </RibbonQuickAccessToolBar>
+            </Ribbon.QuickAccessToolBar>
+            <!-- Application Menu, located at the left-hand side (down arrow) -->
+            <Ribbon.ApplicationMenu>
+                <RibbonApplicationMenu KeyTip="F">
+                   
+                </RibbonApplicationMenu>
+            </Ribbon.ApplicationMenu>
+            <!-- Ribbon Tab #1: Home -->
+            <RibbonTab Header="Inventario" KeyTip="H" >
+                <!-- Home  group-->
+                <RibbonGroup x:Name="InventarioGroup" Header="Gestión Articulos">
+                    
+                </RibbonGroup>
+                <!-- Employee And Payroll group-->
+                <RibbonGroup x:Name="Employee" Header="Consultas">
+                   
+                </RibbonGroup>
+            </RibbonTab>
+            <!-- Ribbon Tab #2: -->
+            <RibbonTab Header="Compras" KeyTip="I">
+            </RibbonTab>
+            <!-- Ribbon Tab #3: -->
+            <RibbonTab Header="Ventas" KeyTip="L">
+            </RibbonTab>
+        </Ribbon>
+    </Grid>
+</Controls:MetroWindow>

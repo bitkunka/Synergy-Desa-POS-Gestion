@@ -1,0 +1,105 @@
+-------------------
+-- Gestion Producto
+-------------------
+
+(Ingeniería de procesos y productos)
+
+Proposito 
+
+ Centralizar la gestion de productos y servicios a traves de la organizacion, incluyendo los de lista de   materiales (BOM), Las formulas (MFG proceso)
+
+Funcionalidad 
+
+1 - Especificación de Productos.
+
+    Configurador de Productos  (BOM) y (Hoja de Ruta): permite definir la lista jerárquica de materiales y los procesos de la hoja de ruta, Precios y Costos.
+
+2 - Documentación de Procesos
+
+     Libre edición de instructivos en cada operación.
+
+
+(Costeo de productos y partes)
+
+
+3 - Configuración de Costos Estándar de Produccion y desviaciones.
+4 - Configuración de Costos Estándar por lotes.
+5 - Esquema de Costos Indirectos definibles por el usuario.
+6 - Actualizador masivo de costos.
+7 - Actualización masiva de Listas de Precios de Ventas a partir del costeo. 
+
+---------------------------------------
+-- Planeamiento y control de producción
+---------------------------------------
+
+8 -  Gestión de Lista de Pedidos en Firme
+12 - Generación y gestión de Órdenes de Produccion (Plan de produccion)
+13 - Órdenes de Compras Abiertas.
+14 - Transferencia de Productos a Terceros.
+18 - Registro de Declaración de producción desde aplicaciones externas.
+19 - Consulta integral de Órdenes de Trabajo.
+20 - Consulta integral de Terceros. 
+
+
+23 - Análisis OLAP utilizando MS ExcelTM.
+24 - Exportación del plan de trabajo a MS PROJECTTM.
+25 - Análisis Dinámicos de Cargas de Máquina y Mano de Obra.
+26 - Generación de Asientos contables de producción.
+27 - Potente simulador MRP.
+
+28 - Generación de Órdenes de Trabajo Internas y Externas a partir del planificador MRP.
+29 - Generación de Órdenes de Compras en Tango Compras a partir del planificador MRP.
+30 - Generación de Solicitudes de Compras en Tango Compras a partir del planificador MRP. 
+
+
+ o Reserva de materiales.
+ o Subproductos Teóricos, Planeados y Realizados.
+ o Rechazos y Defectuoso. Material no conformante.
+ o Asignación de OT a usuarios con notificación configurable vía email.
+
+
+
+
+
+
+
+
+
+
+Version 2 
+
+------------
+
+Produccion
+
+-----------
+
+CFG
+	Producto
+		Especificacion de Producto (semi elaborado - elaborado)
+			Lista de Materiales 
+			Hoja de Ruta
+
+
+TRSN
+	Produccion 
+		
+		Orden de Produccion (OP)
+			Gestion de OPs
+			Declarar Produccion
+			Declarar Consumos
+			Devolucion de Materiales defectuosos
+			Declarar Productos Defectos
+			Cerrar Orden de Fabricacion
+			
+		Plan de Produccion
+				
+			Pedidos en Firme
+			Planificar Orden de Fabricacion
+			Asistente MRP
+			Solicitud de Materiales
+			Simular Produccion
+
+RPT
+	Informes de Produccion
+ 

@@ -1,0 +1,347 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2C2A076B-E626-4A07-9D6E-4AEE3FEC41B6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SynergyGestion.GUI</RootNamespace>
+    <AssemblyName>SynergyGestion.GUI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <ApplicationIcon>Icons\App.ico</ApplicationIcon>
+    <Utf8Output>true</Utf8Output>
+    <ExpressionBlendVersion>4.0.20408.0</ExpressionBlendVersion>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)\$(Configuration)\</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+    <IntermediateOutputPath>C:\Users\Gustavo\AppData\Local\Temp\vs95CA.tmp\Debug\</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\build\bin\NET 4.5\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+    <IntermediateOutputPath>C:\Users\Gustavo\AppData\Local\Temp\vs95CA.tmp\Release\</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Caliburn.Micro">
+      <HintPath>..\..\..\..\librerias\Caliburn.Micro.dll</HintPath>
+    </Reference>
+    <Reference Include="Caliburn.Micro.Platform">
+      <HintPath>..\..\..\..\librerias\Caliburn.Micro.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Fluent">
+      <HintPath>..\..\..\..\librerias\Fluent.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject">
+      <HintPath>..\..\..\..\librerias\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Extensions.Conventions">
+      <HintPath>..\..\..\..\librerias\Ninject.Extensions.Conventions.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Extensions.NamedScope">
+      <HintPath>..\..\..\..\librerias\Ninject.Extensions.NamedScope.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core">
+    </Reference>
+    <Reference Include="System.Windows.Controls.DataVisualization.Toolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\librerias\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq">
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WPFToolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="AppBootstrapper.cs" />
+    <Compile Include="AppWindowManager.cs" />
+    <Compile Include="NavBarViewModel.cs" />
+    <Compile Include="ShellViewModel.cs" />
+    <Compile Include="Trabajos\ExplosionInsumosViewModel.cs" />
+    <Compile Include="Trabajos\FasesViewModel.cs" />
+    <Compile Include="Trabajos\CronogramaViewModel.cs" />
+    <Compile Include="Trabajos\PresupuestoViewModel.cs" />
+    <Compile Include="Trabajos\FichaTecnicaViewModel.cs" />
+    <Compile Include="Trabajos\NuevoTrabajoViewModel.cs" />
+    <Compile Include="Trabajos\ListadoTrabajosViewModel.cs" />
+    <Compile Include="Trabajos\TableroViewModel.cs" />
+    <Compile Include="Util\VisualizationViewModelType.cs" />
+    <Compile Include="Util\VisualizationViewModel.cs" />
+    <Compile Include="Util\ScreenLocator.cs" />
+    <Page Include="NavBarView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ShellView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Trabajos\ExplosionInsumosView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Trabajos\FasesView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Trabajos\CronogramaView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Trabajos\PresupuestoView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Trabajos\FichaTecnicaView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Trabajos\NuevoTrabajoView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Trabajos\ListadoTrabajosView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Trabajos\TableroView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\SampleImageForScreenTip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Paste.png" />
+    <Resource Include="Images\PasteLarge.png" />
+    <Resource Include="Images\Cut.png" />
+    <Resource Include="Images\Copy.png" />
+    <Resource Include="Images\FormatPainter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Bold.png" />
+    <Resource Include="Images\ChangeCase.png" />
+    <Resource Include="Images\ClearFormatting.png" />
+    <Resource Include="Images\FontColor.png" />
+    <Resource Include="Images\GrowFont.png" />
+    <Resource Include="Images\Italic.png" />
+    <Resource Include="Images\ShrinkFont.png" />
+    <Resource Include="Images\Strikethrough.png" />
+    <Resource Include="Images\Subscript.png" />
+    <Resource Include="Images\Superscript.png" />
+    <Resource Include="Images\TextEffects.png" />
+    <Resource Include="Images\TextHighlightColor.png" />
+    <Resource Include="Images\Underline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\PasteImage.png" />
+    <Resource Include="Images\PasteTextOnly.png" />
+    <Resource Include="Images\PasteText.png" />
+    <Resource Include="Images\PasteFormating.png" />
+    <Resource Include="Images\PasteSourceFormating.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Box.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Test16.png" />
+    <Resource Include="Images\Test32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\App.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\GalleryLarge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\BlackTheme.png" />
+    <Resource Include="Images\BlueTheme.png" />
+    <Resource Include="Images\SilverTheme.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Blue.png" />
+    <Resource Include="Images\BlueLarge.png" />
+    <Resource Include="Images\Brown.png" />
+    <Resource Include="Images\BrownLarge.png" />
+    <Resource Include="Images\Gray.png" />
+    <Resource Include="Images\GrayLarge.png" />
+    <Resource Include="Images\Green.png" />
+    <Resource Include="Images\GreenLarge.png" />
+    <Resource Include="Images\Orange.png" />
+    <Resource Include="Images\OrangeLarge.png" />
+    <Resource Include="Images\Pink.png" />
+    <Resource Include="Images\PinkLarge.png" />
+    <Resource Include="Images\Red.png" />
+    <Resource Include="Images\RedLarge.png" />
+    <Resource Include="Images\Yellow.png" />
+    <Resource Include="Images\YellowLarge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\newLarge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\dollar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\search_binoculars.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\employees.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\view_detail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\project_spec.png" />
+    <Resource Include="Resources\Icons\1421226011_Project.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\spin-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\time.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\preferences-desktop-cryptography.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\applications-engineering.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\preferences-system.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\order-history.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\speed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\home-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\piechart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\download-alt-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\edit-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\search-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\calendar-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\excel.png" />
+    <Resource Include="Resources\Icons\pdf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\bullet-blue.png" />
+    <Resource Include="Resources\Icons\bullet-green.png" />
+    <Resource Include="Resources\Icons\bullet-red.png" />
+    <Resource Include="Resources\Icons\bullet-yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\Refresh.png" />
+    <Resource Include="Resources\Icons\stock32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\dominio\SynergyGestion.Dominio\SynergyGestion.Dominio.csproj">
+      <Project>{64af5933-d554-4129-8303-e9db89b96ea9}</Project>
+      <Name>SynergyGestion.Dominio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\agency.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

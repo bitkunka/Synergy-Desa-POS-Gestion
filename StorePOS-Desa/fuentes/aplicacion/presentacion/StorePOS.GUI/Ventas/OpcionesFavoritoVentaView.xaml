@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="StorePOS.GUI.Ventas.OpcionesFavoritoVentaView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro" 
+             xmlns:cal="http://www.caliburnproject.org" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" 
+             d:DesignWidth="300">
+    <StackPanel>
+        <Label Content="Opciones" Margin="6,2,10,0" FontSize="18" />
+        <Border Background="{StaticResource TextBoxBorderBrush}" Margin="6,2,10,0" Height="1"></Border>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.280*"  />
+                <ColumnDefinition Width="0.620*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+            </Grid.RowDefinitions>
+            <Label Content="Clientes" Margin="4,2,10,0" FontSize="14"  />
+            <StackPanel Grid.Column="1" Orientation="Horizontal">
+                <Controls:Tile Grid.Column="1" Title="Nuevo" Height="100" Width="100" Background="{StaticResource TextBoxBorderBrush}">
+                    <Grid Background="{StaticResource TextBoxBorderBrush}" Height="100" Width="100">
+                        <Rectangle Width="40" Height="40" Fill="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type Button}}}">
+                            <Rectangle.OpacityMask>
+                                <VisualBrush Stretch="Fill" Visual="{StaticResource appbar_page_add}" />
+                            </Rectangle.OpacityMask>
+                        </Rectangle>
+                    </Grid>
+                </Controls:Tile>
+                <Controls:Tile Grid.Column="1" Title="Buscar" Height="100" Width="100" BorderBrush="{StaticResource TextBoxBorderBrush}" Background="{StaticResource TextBoxBorderBrush}">
+                    <Grid Background="{StaticResource TextBoxBorderBrush}" Height="102" Width="102">
+                        <Rectangle Width="40" Height="40" Fill="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type Button}}}">
+                            <Rectangle.OpacityMask>
+                                <VisualBrush Stretch="Fill" Visual="{StaticResource appbar_page_search}" />
+                            </Rectangle.OpacityMask>
+                        </Rectangle>
+                    </Grid>
+                </Controls:Tile>
+            </StackPanel>
+        </Grid>
+    </StackPanel>
+</UserControl>

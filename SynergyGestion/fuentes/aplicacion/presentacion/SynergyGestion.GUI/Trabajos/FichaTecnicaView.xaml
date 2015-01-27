@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="SynergyGestion.GUI.Trabajos.FichaTecnicaView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:cal="http://www.caliburnproject.org"
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             xmlns:ChartingToolkit="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit"
+             xmlns:Toolkit="http://schemas.microsoft.com/wpf/2008/toolkit"
+             xmlns:SynergyGestion.GUI="clr-namespace:SynergyGestion.GUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" 
+             d:DesignWidth="300">
+
+    <StackPanel>
+        <TextBlock Margin="10,0,0,0" VerticalAlignment="Center" FontSize="16" FontWeight="Bold" Text="Ficha Técnica - Obra GH1023" TextWrapping="NoWrap" Foreground="Green" />
+        <TabControl Margin="10">
+            <TabItem Header="Ficha Técnica">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Label Content="Nombre de la Obra" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <TextBox Grid.Column="1"/>
+                    <Label Grid.Row="1" Content="Datos" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <TextBox Grid.Row="1" Grid.Column="1" />
+                    <Label Grid.Row="2" Content="Fecha" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <TextBox Grid.Row="2" Grid.Column="1" />
+                    <Label Grid.Row="3" Content="Dirección" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <TextBox Grid.Row="3" Grid.Column="1" />
+                    <Label Grid.Row="4" Content="Ciudad" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <TextBox Grid.Row="4" Grid.Column="1" />
+                    <Label Grid.Row="5" Content="País" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <TextBox Grid.Row="5" Grid.Column="1" />
+                </Grid>
+            </TabItem>
+            <TabItem Header="Control" />
+            <TabItem Header="Cliente" />
+        </TabControl>
+    </StackPanel>
+
+</UserControl>

@@ -1,0 +1,56 @@
+﻿<Fluent:RibbonWindow x:Class="SynergyGestion.GUI.ShellView"
+                     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                     xmlns:cal="http://www.caliburnproject.org"
+                     xmlns:Fluent="clr-namespace:Fluent;assembly=Fluent"
+                     xmlns:SynergyGestion.GUI="clr-namespace:SynergyGestion.GUI"
+                     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                     DontUseDwm="False"
+                     Height="768"
+                     Width="1024"
+                     MinWidth="80"
+                     MinHeight="60"
+                     mc:Ignorable="d"
+                     WindowState="Maximized">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <ContentControl cal:View.Model="{Binding NavBar}"  />
+        <Border Grid.Row="1" Background="White">
+            <ContentControl x:Name="ActiveItem"   />
+        </Border>
+        <Fluent:StatusBar HorizontalAlignment="Stretch"
+                          VerticalAlignment="Bottom"
+                          Grid.Row="2">
+            <Fluent:StatusBarItem Title="Words Width"
+                                  Value="150"
+                                  HorizontalAlignment="Left">
+                <TextBlock Text="150 px" />
+            </Fluent:StatusBarItem>
+            <Separator HorizontalAlignment="Left" />
+            <Fluent:StatusBarItem Title="Selected Words"
+                                  Value="15"
+                                  ToolTip="This is Selected Words"
+                                  Content="15"
+                                  HorizontalAlignment="Left" />
+            <Separator HorizontalAlignment="Left" />
+            <Fluent:StatusBarItem Title="Zoom"
+                                  HorizontalAlignment="Right"
+                                  Value="{Binding Value, ElementName=zoomSlider, StringFormat={}{0:0}\%}" />
+            <Fluent:StatusBarItem Title="Zoom Slider"
+                                  HorizontalAlignment="Right">
+                <Slider x:Name="zoomSlider"
+                        Minimum="20"
+                        Maximum="500"
+                        IsDirectionReversed="False"
+                        Style="{DynamicResource ZoomSliderStyle}"
+                        Value="100" />
+            </Fluent:StatusBarItem>
+        </Fluent:StatusBar>
+    </Grid>
+
+</Fluent:RibbonWindow>

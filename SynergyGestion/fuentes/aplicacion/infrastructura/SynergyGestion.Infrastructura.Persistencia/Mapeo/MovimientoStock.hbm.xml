@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+          assembly="SynergyGestion.Dominio"
+          namespace="SynergyGestion.Dominio.Modelo.Inventario" default-access="field">
+  
+  <class name="MovimientoStock" table="MovimientoStock" schema="Inventario">
+    <id name="id">
+      <generator class="hilo">
+        <param name="table">hibernate_unique_key</param>
+        <param name="column">next_hi</param>
+      </generator>
+    </id>
+    <property name="tipoMovimientoStock" column="tipoMovimientoStock" type="SynergyGestion.Infrastructura.Persistencia.Mapeo.TipoMovimientoStockTipoString, SynergyGestion.Infrastructura.Persistencia" />
+    <many-to-one name="stock" column="idStock" cascade="all-delete-orphan" lazy="false" />
+    <property name="cantidad" not-null="true" />
+    <property name="documentoComercial" not-null="true" />
+    <property name="fechaDocumento" not-null="true" />
+    <property name="fechaRegistro" not-null="true" />
+    <property name="usuarioRegistro" not-null="true" />
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{64AF5933-D554-4129-8303-E9DB89B96EA9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StorePOS.Dominio</RootNamespace>
+    <AssemblyName>StorePOS.Dominio</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Comun\AbstractEntity.cs" />
+    <Compile Include="Comun\DominioException.cs" />
+    <Compile Include="Comun\Entity.cs" />
+    <Compile Include="Comun\IRepositorio.cs" />
+    <Compile Include="Comun\IEntidad.cs" />
+    <Compile Include="Comun\IGenericEntity.cs" />
+    <Compile Include="Comun\IObjetoValor.cs" />
+    <Compile Include="Modelo\AdministracionSistema\IUsuarioRepositorio.cs" />
+    <Compile Include="Modelo\AdministracionSistema\Sucursal.cs" />
+    <Compile Include="Modelo\AdministracionSistema\Empresa.cs" />
+    <Compile Include="Modelo\AdministracionSistema\DatosEjemplo.cs" />
+    <Compile Include="Modelo\AdministracionSistema\Menu.cs" />
+    <Compile Include="Modelo\AdministracionSistema\Modulo.cs" />
+    <Compile Include="Modelo\AdministracionSistema\OpcionMenu.cs" />
+    <Compile Include="Modelo\AdministracionSistema\Usuario.cs" />
+    <Compile Include="Modelo\Compras\CestaOrdenCompra.cs" />
+    <Compile Include="Modelo\Compras\DatosEjemplo.cs" />
+    <Compile Include="Modelo\Compras\IProveedorRepositorio.cs" />
+    <Compile Include="Modelo\Compras\Proveedor.cs" />
+    <Compile Include="Modelo\Inventario\Articulo.cs" />
+    <Compile Include="Modelo\Inventario\CestaIngresoStock.cs" />
+    <Compile Include="Modelo\Inventario\ArticuloDuplicadoException.cs" />
+    <Compile Include="Modelo\Inventario\IStockRepositorio.cs" />
+    <Compile Include="Modelo\Inventario\CriterioCosteo.cs" />
+    <Compile Include="Modelo\Inventario\GrupoArticulo.cs" />
+    <Compile Include="Modelo\Inventario\IArticuloRepositorio.cs" />
+    <Compile Include="Modelo\Inventario\TransferenciaStock.cs" />
+    <Compile Include="Modelo\Inventario\Ubicacion.cs" />
+    <Compile Include="Modelo\Inventario\DatosEjemplo.cs" />
+    <Compile Include="Modelo\Inventario\MovimientoStock.cs" />
+    <Compile Include="Modelo\Inventario\Stock.cs" />
+    <Compile Include="Modelo\Inventario\TipoMovimientoStock.cs" />
+    <Compile Include="Modelo\Ventas\CestaOrdenVenta.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Modelo\Produccion\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

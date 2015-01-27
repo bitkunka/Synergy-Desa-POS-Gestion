@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+          assembly="SynergyGestion.Dominio"
+           namespace="SynergyGestion.Dominio.Modelo.AdministracionSistema">
+  
+  <class name="Menu" table="Menu" schema="AdministracionSistema">
+    <id name="Id">
+      <generator class="hilo">
+        <param name="table">hibernate_unique_key</param>
+        <param name="column">next_hi</param>
+      </generator>
+    </id>
+   
+    <bag name="Opciones" access="field.camelcase" cascade="all-delete-orphan" lazy="false">
+      <key column="IdMenu" />
+      <one-to-many class="OpcionMenu" />
+    </bag>
+    
+  </class>
+</hibernate-mapping>

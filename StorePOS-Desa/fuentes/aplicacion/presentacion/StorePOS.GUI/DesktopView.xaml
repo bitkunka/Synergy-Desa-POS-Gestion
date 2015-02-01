@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="StorePOS.GUI.DesktopView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:cal="http://www.caliburnproject.org"  
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" 
+             d:DesignWidth="300">
+    
+    <StackPanel Margin="50">
+        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="30" Text="Escritorio" Margin="0,0,0,30" />
+        <DockPanel>
+            <ItemsControl ItemsSource="{Binding Path=DesktopOptionItems}" DockPanel.Dock="Left">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <UniformGrid Columns="2" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Button Style="{DynamicResource MetroFlatButton}" Content="{Binding Title}" Margin="0,0,5,5" Background="{Binding Color}" Width="200" Height="200" Foreground="White">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Click">
+                                    <cal:ActionMessage MethodName="MostrarPopupViewModel">
+                                        <cal:Parameter Value="{Binding ViewModelName}" />
+                                    </cal:ActionMessage>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </Button>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+            <ItemsControl ItemsSource="{Binding Path=DesktopOptionItems}" DockPanel.Dock="Left">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <UniformGrid Columns="2" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Button Style="{DynamicResource MetroFlatButton}" Content="{Binding Title}" Margin="0,0,5,5" Background="{Binding Color}" Foreground="White" />
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </DockPanel>
+    </StackPanel>
+</UserControl>

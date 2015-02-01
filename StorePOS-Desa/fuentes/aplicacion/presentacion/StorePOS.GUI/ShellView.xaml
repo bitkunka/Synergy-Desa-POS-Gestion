@@ -22,6 +22,13 @@
                                 </Rectangle.OpacityMask>
                             </Rectangle>
                         </Grid>
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="Click">
+                                <cal:ActionMessage MethodName="MostrarViewModel">
+                                    <cal:Parameter Value="Ventas.DesktopViewModel" />
+                                </cal:ActionMessage>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
                     </Controls:Tile>
                     <Controls:Tile Title="Compras" Height="100" Width="100">
                         <Grid Background="#FE7004" Height="100" Width="100">
@@ -62,42 +69,6 @@
         </Controls:WindowCommands>
     </Controls:MetroWindow.RightWindowCommands>
 
-    <StackPanel Margin="50">
-        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="30" Text="Escritorio" Margin="0,0,0,30" />
-        <DockPanel>
-            <ItemsControl ItemsSource="{Binding Path=Items}" DockPanel.Dock="Left">
-                <ItemsControl.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <UniformGrid Columns="2" />
-                    </ItemsPanelTemplate>
-                </ItemsControl.ItemsPanel>
-                <ItemsControl.ItemTemplate>
-                    <DataTemplate>
-                        <Button Style="{DynamicResource MetroFlatButton}" Content="{Binding Title}" Margin="0,0,5,5" Background="{Binding Color}" Width="200" Height="200" Foreground="White">
-                            <i:Interaction.Triggers>
-                                <i:EventTrigger EventName="Click">
-                                    <cal:ActionMessage MethodName="OpenWindow">
-                                        <cal:Parameter Value="{Binding ViewModelName}" />
-                                    </cal:ActionMessage>
-                                </i:EventTrigger>
-                            </i:Interaction.Triggers>
-                        </Button>
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>
-            </ItemsControl>
-            <ItemsControl ItemsSource="{Binding Path=Items}" DockPanel.Dock="Left">
-                <ItemsControl.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <UniformGrid Columns="2" />
-                    </ItemsPanelTemplate>
-                </ItemsControl.ItemsPanel>
-                <ItemsControl.ItemTemplate>
-                    <DataTemplate>
-                        <Button Style="{DynamicResource MetroFlatButton}" Content="{Binding Title}" Margin="0,0,5,5" Background="{Binding Color}" Foreground="White" />
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>
-            </ItemsControl>
-        </DockPanel>
-    </StackPanel>
+    <ContentControl x:Name="ActiveItem"   />
 
 </Controls:MetroWindow>

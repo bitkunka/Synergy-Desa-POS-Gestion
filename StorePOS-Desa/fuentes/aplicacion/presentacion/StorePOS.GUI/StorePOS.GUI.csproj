@@ -90,6 +90,7 @@
   <ItemGroup>
     <Compile Include="AppBootstrapper.cs" />
     <Compile Include="AppWindowManager.cs" />
+    <Compile Include="DesktopViewModel.cs" />
     <Compile Include="Fake\Articulo.cs" />
     <Compile Include="Inventario\ExplorarArticulosViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -105,7 +106,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Util\DesktopOptionItem.cs" />
+    <Compile Include="Util\ScreenLocator.cs" />
+    <Compile Include="Util\VisualizationViewModel.cs" />
+    <Compile Include="Util\VisualizationViewModelType.cs" />
     <Compile Include="Ventas\ColorArticulo.cs" />
+    <Compile Include="Ventas\DesktopViewModel.cs" />
     <Compile Include="Ventas\ItemFactura.cs" />
     <Compile Include="Ventas\OpcionesFavoritoVentaViewModel.cs" />
     <Compile Include="Ventas\GenerarFacturaViewModel.cs" />
@@ -130,6 +136,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="DesktopView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Inventario\ExplorarArticulosView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -141,6 +151,10 @@
     <Page Include="Resources\Theme1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventas\DesktopView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Ventas\OpcionesFavoritoVentaView.xaml">
       <Generator>MSBuild:Compile</Generator>
